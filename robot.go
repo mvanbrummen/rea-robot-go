@@ -21,7 +21,7 @@ func (r *robot) HasBeenPlaced() bool {
 func (r *robot) Report() string {
 	report := ""
 	if r.HasBeenPlaced() {
-		report = fmt.Sprintf("%d,%d,%s\n", r.position.X, r.position.Y, r.direction.String())
+		report = fmt.Sprintf("%s,%s\n", r.position.String(), r.direction.String())
 		fmt.Println(report)
 	}
 	return report
