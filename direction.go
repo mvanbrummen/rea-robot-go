@@ -16,6 +16,23 @@ var directions = [...]string{
 	"WEST",
 }
 
+func Parse(val string) Direction {
+	var d Direction
+	switch val {
+	case "NORTH":
+		d = NORTH
+	case "EAST":
+		d = EAST
+	case "SOUTH":
+		d = SOUTH
+	case "WEST":
+		d = WEST
+	default:
+		d = Direction(-1)
+	}
+	return d
+}
+
 func (d Direction) String() string {
 	return directions[d]
 }
