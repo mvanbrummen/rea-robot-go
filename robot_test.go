@@ -37,7 +37,7 @@ func TestPlace(t *testing.T) {
 	}
 	for _, test := range tests {
 		r.Place(test.X, test.Y, test.Facing)
-		if r.direction != test.Facing || r.position.X() != test.X || r.position.Y() != test.Y {
+		if r.direction != test.Facing || r.position.X != test.X || r.position.Y != test.Y {
 			t.Error("For", test, "Failed")
 		}
 	}
