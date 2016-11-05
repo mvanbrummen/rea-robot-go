@@ -26,7 +26,6 @@ func main() {
 			fmt.Print("> ")
 			text, _ := reader.ReadString('\n')
 			parseCommand(text, robot)
-			os.Exit(1)
 		}
 	} else {
 		scanner := bufio.NewScanner(os.Stdin)
